@@ -8,8 +8,19 @@
   
 #script:
 #  - firebase deploy --only functions --project "$PROJECT_ID" --token "$TOKEN"
+language: node_js
+node_js:
+  - lts/*
+install:
+  - npm install
+script:
+  - npm test
+  - npm run build
 deploy:
   provider: firebase
+  project: PROJECT_ID
   token:
-    secure: "$TOKEN"
-  project: "$PROJECT_ID"
+    secure: TOKEN
+cache:
+  directories:
+    - node_modules

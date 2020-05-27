@@ -7,5 +7,5 @@ before_script:
   - npm install
   
 script:
-#  - firebase --non-interactive deploy --only functions --project "$PROJECT_ID" --token "$TOKEN"
-- firebase login:ci
+  - firebase --non-interactive deploy --only functions --project "$PROJECT_ID" --token "$TOKEN"
+#- firebase login:ci

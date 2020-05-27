@@ -6,4 +6,4 @@ before_script:
   - cd functions && npm install
 
 script:
-  - firebase deploy --only functions --token $TOKEN
+  - firebase deploy --only functions --token "$TOKEN"

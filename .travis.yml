@@ -7,4 +7,4 @@ before_script:
   - npm install
   
 script:
-  - firebase deploy --only functions --token "$TOKEN"
+  - firebase deploy --only functions --project "$PROJECT_ID" --token "$TOKEN"
